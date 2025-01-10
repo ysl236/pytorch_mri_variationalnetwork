@@ -109,9 +109,16 @@ def save_recon(under, recon, reference, index, save_dir, error_scale=1,do_save=T
         diff = error_scale*np.abs(reference_mag - recon_mag)
 
         img_to_save = 255*np.concatenate((under_mag,recon_mag,reference_mag,diff),axis=1)
+        recon_to_save = 255*recon_mag
+        refer_to_save = 255*reference_mag
+
         if do_save:
             save_name = save_dir / ('{}.png'.format(batch_size*index + i))
-            imageio.imwrite(str(save_name),img_to_save.astype(np.uint8)) 
+            imageio.imwrite(str(save_name),img_to_save.astype(np.uint8))
+            recon_save_name = save_dir /'recon'/ ('{}.png'.format(batch_size*index + i))
+            refer_save_name = save_dir /'reference'/ ('{}.png'.format(batch_size*index + i))
+            imageio.imwrite(str(recon_save_name), recon_to_save.astype(np.uint8))
+            imageio.imwrite(str(refer_save_name), refer_to_save.astype(np.uint8))
 
     return img_to_save
 

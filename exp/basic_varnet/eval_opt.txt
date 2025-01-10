@@ -1,0 +1,20 @@
+----------------- Options ---------------
+               activation: rbf                           
+               batch_size: 1                             
+                    epoch: 100                           
+              error_scale: 1.0                           
+             features_out: 24                            
+                     gpus: 0                             
+                loss_type: complex                       
+              loss_weight: 1.0                           
+                       lr: 0.0001                        
+                     mode: eval                          	[default: train]
+                 momentum: 0.0                           
+                     name: coronal_pd_fs                 
+          num_act_weights: 31                            
+               num_stages: 10                            
+                optimizer: adam                          
+                 root_dir: ../fast_storage/intern/       	[default: data/knee]
+         sampling_pattern: cartesian_with_os             
+                 save_dir: exp/basic_varnet              
+----------------- End -------------------

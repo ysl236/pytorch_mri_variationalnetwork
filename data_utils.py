@@ -6,8 +6,8 @@ import copy
 import mri_utils
 from fft_utils import numpy_2_complex
 import numpy as np
-DEFAULT_OPTS = {'root_dir':'data/knee',
-				'name':'coronal_pd', 
+DEFAULT_OPTS = {'root_dir':'/home/intern1/fast_storage/intern/',
+				'name':'coronal_pd_fs', 
 				'patients':[1,2,3,4,5,6,7,8,9,10],
 				'start_slice':11,'end_slice':30,
 				'eval_patients':[11,12,13,14,15,16,17,18,19,20],
