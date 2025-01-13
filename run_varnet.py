@@ -16,7 +16,7 @@ parser.add_argument('--root_dir',         type=str, default='data/knee',        
 parser.add_argument('--sampling_pattern', type=str, default='cartesian_with_os', help='type of sampling pattern')
 
 # Network configuration
-parser.add_argument('--features_out',     type=int, default=24,    help='number of filter for convolutional kernel')
+parser.add_argument('--features_out',     type=int, default=16,    help='number of filter for convolutional kernel')
 parser.add_argument('--num_act_weights',  type=int, default=31,    help='number of RBF kernel for activation function')
 parser.add_argument('--num_stages',       type=int, default=10,    help='number of stages in the network')
 parser.add_argument('--activation',       type=str, default='rbf', help='activation function to use (rbf or relu)')
